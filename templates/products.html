@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт - Товары</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header>
+    <h1>Мой сайт</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="products.html">Товары</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <h2>Товары</h2>
+
+    <div class="products">
+        {% for product in products %}
+        <div class="product-card">
+            <h3>{{product.name}}</h3>
+            <p>Имя: {{product.name}}</p>
+            <p>Вес: {{product.weight}}</p>
+            <p>Цвет: {{product.color}}</p>
+            <p>Количество: {{product.amount}}</p>
+            <p>Краткое описание: {{product.discription}}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% if products.has_other_pages %}
+    <div class="pagination">
+        {% if products.has_previous%}
+
+        <a href="?page={{products.previous_page_number}}" class="active">Предыдущая страница</a>
+        {% endif %}
+        <span class="current-page">{{products.number}}</span>
+        {% if products.has_next%}
+
+        <a href="?page={{products.next_page_number}}" class="active">Следуящая страница</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Мой сайт</h1>
+  </header>
+
+  <div class="main-content">
+    <h2>Регистрация пользователя</h2>
+    <div class="registration-form">
+      <form id="registration-form">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/products">Товары</a></li>
+      </ul>
+    </nav>
+
+    <div class="contact-form">
+      <h3>Форма обратного звонка</h3>
+      <form id="callback-form">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Номер телефона:</label>
+        <input type="text" id="phone" required>
+
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Контакты: Это текстовое поле содержит информацию о наших контактах.</p>
+  </footer>
+
+</body>
+
+</html>
